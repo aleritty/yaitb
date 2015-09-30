@@ -12,25 +12,25 @@ So you have all that you need inside the project, no strange requirements or vir
 
 PREREQUISITES:
 * Talk to Bothfather and get your token (details HERE)
-* Have a google app engine account (details HERE)
+* Have a google app engine account (details [HERE](https://cloud.google.com/appengine/docs/php/tools/uploadinganapp))
 * Download google cloud sdk (gcloud tool), install and add to your PATH
-* Install composer (details HERE)
+* Install composer (details [HERE](https://getcomposer.org/))
 
 To start your own just:
-* git clone this repo
+* `git clone` this repo
 * open a terminal inside the folder and:
-  * composer
-  * gcloud auth login (open in browser)
-  * git config credential.helper gcloud.sh
-  * git remote add google https://source.developers.google.com/p/<PROJECT-ID>/
+  * `composer`
+  * `gcloud auth login` (opens in browser)
+  * `git config credential.helper gcloud.sh`
+  * `git remote add google https://source.developers.google.com/p/--PROJECT-ID--/`
 
 * start you personalization: copy all the sample files inside EDITME and start creating your command.
   * Remove the -SAMPLE part of the filename
-  * Your Bot need to have at least /start, /stop, /help commands
+  * Your Bot need to have at least `/start`, `/stop`, `/help` commands
   * Many examples of what you can do is inside COMMANDS-EXAMPLES
-  * git commit your work (git commit -a -m "MESSAGE" if you have no fantasy)
-  * git push google master
-  * gcloud preview app deploy -q app.yaml --set-default --version 1
+  * git add and commit your work (`git commit -a -m "MESSAGE"` if you have no fantasy)
+  * `git push google master`
+  * `gcloud preview app deploy -q app.yaml --set-default --version 1`
     * You can automate saving the latest two lines inside an executable shell script inside .git/hooks/post-commit like This
 ```
 #!/bin/sh
@@ -38,15 +38,15 @@ git push google master
 gcloud preview app deploy -q app.yaml --set-default --version 1
 ```
 
-  * IF you want to use advanced functions you will need to enable google appengine default bucket
-    * [https://cloud.google.com/appengine/docs/php/googlestorage/setup]
+  * IF you want to use advanced functions you will need to [enable google appengine default bucket](https://cloud.google.com/appengine/docs/php/googlestorage/setup)
     * This enables: sending files, news distribution, advanced administrator commands
 
 
 
 To Update your bot:
-* git pull origin master
+* `git pull origin master`
 * merge changes if needed
+* `git commit -a -m "MESSAGE"`
 
 In a few seconds google will start serving your bot at:
 https://PROJECTID.appspot.com
