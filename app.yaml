@@ -1,0 +1,38 @@
+runtime: php55
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /webhook
+  script: webhook.php
+
+- url: /setwebhook
+  login: admin
+  script: setwebhook.php
+
+- url: /removewebhook
+  login: admin
+  script: removewebhook.php
+
+- url: /me #technical info about your bot
+  login: admin
+  script: me.php
+
+- url: /(.*\.(gif|png|jpg|ico))$
+  static_files: \1
+  upload: .*\.(gif|png|jpg)$
+
+- url: /img
+  static_dir: img
+
+- url: /index\.html
+  script: EDITME/homepage.php
+
+- url: /.*
+  script: EDITME/homepage.php
+
+error_handlers:
+  - file: EDITME/default_error.html
+
+  - error_code: over_quota
+    file: EDITME/over_quota.html
