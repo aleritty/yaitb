@@ -3,6 +3,15 @@ Yet Another Idiot Telegram Bot
 
 This is another idiot telegram bot.
 
+# OUTDATED
+## THIS PROJECT IS OUTDATED AND SHOULD NOT BE USED
+
+I wrote this bot a long time ago, since then a lot of most useful implementations have been released.
+This project (as today) has no security issues so you are free to use it but I don't reccomend it, it's too outdated.
+
+### original readme follows
+
+
 I choose to write the bot with an objective:
 * free hosting with google app engine (unless you exceed 20req/min... then you have to pay).
 * Absolutelly nothing to configure and easy start
@@ -60,7 +69,7 @@ Now just continue to personalize your bot, you are online!
 CONTRIBUTIONS
 =============
 
-Please feel free to send your contributions.
+Please feel free to send your contributions using issues and pull-requests
 
 TODO
 ====
